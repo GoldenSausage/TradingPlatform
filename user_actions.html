@@ -1,0 +1,106 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trading Platform</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    
+</head>
+    
+<body>
+<div class="root">
+<div class="background">
+    <img src="img/stock_market.jpg" \alt>
+</div>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation" id="nav">
+    <div class="container" id="containerId">
+        <!--collapsed navbar-->
+        <div class="navbar-header visible-xs header" id="collapsedNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div>
+                <img src="img/logo-blue-small.jpg" id="collapsedLogo" \alt>
+            </div>
+            
+        </div>
+
+        <!--uncollapsed navbar-->
+        <div class="collapse navbar-collapse" id="navItems">
+            <div id="logo">
+                <img src="img/logo-blue-small.jpg" \alt>
+            </div>
+            <ul class="nav nav-justified " style="color:black">
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="index.html">About</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="login.html">Login</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="user_actions.html">User Actions</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+
+<!--<div class="" style="height:100px"></div>-->
+<div class="actions">
+    <button class="actionButtons col-md-3 col-sm-4 col-xs-12" id="portfolioAction" onclick="selectAction('Portfolio')">Portfolio</button>
+    <button class="actionButtons col-md-3 col-sm-4 col-xs-12" id="buyTradesAction" onclick="selectAction('Buy Trades')">Buy Trades</button>
+    <button class="actionButtons col-md-3 col-sm-4 col-xs-12" id="sellTradesAction" onclick="selectAction('Sell Trades')">Sell Trades</button>
+</div>
+
+
+<div class="content">    
+    <div class="container">
+        <div id="portfolio" class="actionPanel">
+            <div class="col-md-12 col-sm-12 col-xs-12" id="header">
+                Portfolio
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                
+            </div>
+        </div>
+        
+        <div id="Buy Trades" class="actionPanel">
+            Buy Trades
+        </div>
+        <div id="Sell Trades" class="actionPanel">
+            Sell Trades
+        </div>
+    </div>
+</div>
+
+    
+<div class="spacer">
+    <li onclick="test()">hello</li>
+</div>
+</div>
+
+</body>
+</html>

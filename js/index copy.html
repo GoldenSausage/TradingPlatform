@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Trading Platform</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    
+</head>
+    
+<body>
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation" id="nav">
+    <div class="container" id="containerId">
+        <!--collapsed navbar-->
+        <div class="navbar-header visible-xs header" id="collapsedNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" id="toggleButton">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div>
+                <img src="img/logo-small.png" id="collapsedLogo" \alt>
+            </div>
+            
+        </div>
+
+        <!--uncollapsed navbar-->
+        <div class="collapse navbar-collapse" id="navItems">
+            <div id="logo">
+                <img src="img/logo-small.png" \alt>
+            </div>
+            <ul class="nav nav-justified" style="color:black">
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="#/">About</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="login.html">Login</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target=".navbar-collapse" href="user_actions.html">User Actions</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</nav>
+
+<div class="content">
+    <div class="container">
+        <p>
+            Nelson's Trading Platform
+            <br><br>
+            <p style="font-size: 20px">
+                Trading platform to buy and sell trades from various companies. Login to gain access to user actions.
+            </p>
+            <p id = "billGates" style="font-size: 60px; color:red; display:none">
+                You can be the next bill gates!!!
+            </p>
+        </p>
+    </div>
+
+</div>
+    
+    <script>
+        var timer;
+        //flash();
+        /*
+        $(window).bind("load", function() {
+            adjustContainerHeight();
+        });
+    
+        $( window ).resize(function() {
+            adjustContainerHeight();
+        });
+        
+        function adjustContainerHeight(){
+            element = document.getElementById("containerId");
+            containerId.style.set.height = document.getElementById("navMenu").offsetHeight+"px";
+        }*/
+        function flash(){
+            element=document.getElementById("billGates");
+            alternateDisplay(element);
+        }
+        function alternateDisplay(element){
+            clearTimeout(timer);
+            console.log(element.style.visibility);
+            if (element.style.visibility == "hidden"){
+                
+                element.style.visibility = "visible";
+            }
+            else{
+                
+                element.style.visibility = "hidden";
+            }
+            timer = setTimeout(flash, 100);
+        }
+        
+    
+    </script>
+    
+</body>
+</html>
