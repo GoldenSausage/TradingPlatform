@@ -2,6 +2,7 @@
 @mainColor: #0066ff;
 @lightColor: #ffcc99;
 @offWhite: #e6e6e6;
+@buttonOrange: #ff8000;
 
 
 body{
@@ -19,7 +20,7 @@ body{
     width:100%;
     height:100%;
     min-height:100vh;
-    -webkit-filter: brightness(300%); 
+    //-webkit-filter: brightness(300%); 
     img{
         object-fit: cover;
         //min-height:100vh;
@@ -102,6 +103,7 @@ body{
         background-color: black;
         color: white;
         border: 2px solid @mainColor;
+        border-radius:20px;
         float:none;
     }
     .actionButtons:hover{
@@ -131,6 +133,7 @@ body{
     background-color:@mainColor;
     color:black;
     //background-color:black;
+    box-shadow:0px 0px 30px 5px black;
 }
 
 #formDiv{
@@ -140,6 +143,10 @@ body{
         margin-right: auto;
         font-size:16px;
         text-align:center;
+        input{
+            //color:black;
+            text-align:center;
+        }
     }   
 }
 .actionPanel{
@@ -151,18 +158,21 @@ body{
 #portfolio{
     display:block;
 }
-.submitButton{
+.content .container .actionPanel #loginForm .submitButton{
     width:15%;
     height:35px;
     //border-radius: 5px;
-    border: 1px solid @mainColor;
+    border: 2px solid white;
     //background-color: @mainColor;
-    background-color: black;
+    background-color: @buttonOrange;
     color:white;
     font-size:14px;
+    border-radius:20px;
 }
-.submitButton:hover{
-    background-color:burlywood;
+
+.content .container .actionPanel #loginForm .submitButton:hover{
+    //background-color:burlywood;
+    background-color:orange;
 }
 .textBox1{
     height: 29px;
@@ -173,6 +183,8 @@ body{
     font-size: 15px;
     font-family: Verdana;
     float:none;
+    color:black;
+    text-align:center;
 }
 .dropdown{
     //background-color:#ffcc99;
@@ -197,7 +209,8 @@ body{
         }
         .dropdownItem{
             padding: 10px;
-            background-color:#ffcc99;
+            //background-color:#ffcc99;
+            background-color:#ffeecc;
             //background-color:red;
         }
         .dropdownItem:hover{
